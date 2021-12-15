@@ -1,0 +1,32 @@
+name: grouparoo-cloud
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  ci:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: grouparoo/cloud-action@main
+        with:
+          project_id: ${{ secrets.GROUPAROO_CLOUD_PROJECT_ID }}
+          token: ${{ secrets.GROUPAROO_CLOUD_TOKEN }}
+  deploy:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: grouparoo/cloud-action@main
+        with:
+          type: deploy
+          project_id: ${{ secrets.GROUPAROO_CLOUD_PROJECT_ID }}
+          token: ${{ secrets.GROUPAROO_CLOUD_TOKEN }}
