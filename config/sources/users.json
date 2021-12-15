@@ -1,0 +1,29 @@
+[
+  {
+    "class": "Source",
+    "id": "users",
+    "modelId": "users",
+    "name": "Users",
+    "type": "snowflake-import-table",
+    "appId": "snowflake",
+    "options": {
+      "table": "PROFILES"
+    },
+    "mapping": {
+      "ID": "user_id"
+    }
+  },
+  {
+    "class": "Schedule",
+    "id": "users_schedule",
+    "name": "Users schedule",
+    "sourceId": "users",
+    "recurring": false,
+    "recurringFrequency": 0,
+    "confirmRecords": false,
+    "options": {
+      "column": "STAMP"
+    },
+    "filters": []
+  }
+]

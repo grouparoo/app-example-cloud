@@ -1,0 +1,17 @@
+{
+  "class": "Destination",
+  "id": "hubspot",
+  "modelId": "users",
+  "name": "Hubspot",
+  "type": "hubspot-export-contacts",
+  "appId": "hubspot",
+  "collection": "model",
+  "syncMode": "sync",
+  "options": {},
+  "mapping": {
+    "email": "email",
+    "firstname": "first_name",
+    "lastname": "last_name"
+  },
+  "destinationGroupMemberships": {}
+}

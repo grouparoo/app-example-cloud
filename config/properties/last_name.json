@@ -1,0 +1,14 @@
+{
+  "class": "Property",
+  "id": "last_name",
+  "type": "string",
+  "key": "last_name",
+  "sourceId": "users",
+  "unique": false,
+  "isArray": false,
+  "options": {
+    "aggregationMethod": "exact",
+    "column": "LAST_NAME"
+  },
+  "filters": []
+}

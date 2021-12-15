@@ -1,0 +1,14 @@
+{
+  "class": "App",
+  "id": "snowflake",
+  "name": "Snowflake",
+  "type": "snowflake",
+  "options": {
+    "schema": "SNOWFLAKE_SCHEMA",
+    "account": "SNOWFLAKE_ACCOUNT",
+    "database": "SNOWFLAKE_DATABASE",
+    "password": "SNOWFLAKE_PASSWORD",
+    "username": "SNOWFLAKE_USERNAME",
+    "warehouse": "SNOWFLAKE_WAREHOUSE"
+  }
+}

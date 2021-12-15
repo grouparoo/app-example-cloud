@@ -1,0 +1,14 @@
+{
+  "class": "Property",
+  "id": "email",
+  "type": "email",
+  "key": "email",
+  "sourceId": "users",
+  "unique": true,
+  "isArray": false,
+  "options": {
+    "aggregationMethod": "exact",
+    "column": "EMAIL"
+  },
+  "filters": []
+}
