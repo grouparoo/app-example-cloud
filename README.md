@@ -46,7 +46,7 @@ Assuming you have node.js and the `grouparoo` cli installed:
 
 ![image](https://user-images.githubusercontent.com/4368928/146205580-cc01a0d4-359d-43ef-af64-79b95129d3c9.png)
 
-3. Go to your project's Secrets page on Grouparoo Cloud and set up any sensitive details you may need to specify to connect to your sources and destinations.
+3. Go to your project's Secrets page on Grouparoo Cloud and set up any sensitive details you may need to specify to connect to your Sources and Destinations.
 
 ![image](https://user-images.githubusercontent.com/4368928/146205316-32ea4ba4-8607-45cb-a6dc-b307f67aa95d.png)
 
