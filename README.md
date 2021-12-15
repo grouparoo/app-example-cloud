@@ -9,6 +9,10 @@ Goal: To create a scalable and flexible Grouparoo deployment that:
 - Automatically deploys Grouparoo configuration on pushes to `main`
 - Is a [12-factor app](https://12factor.net/) with all configuration stored in the Environment
 
+You can learn more about how this works by [reading the documentation](https://grouparoo.com/docs/cloud), or take a brief tour by [watching this video](https://www.youtube.com/watch?v=pI9Af4FJ3ws).
+
+[![Grouparoo Cloud Video](https://img.youtube.com/vi/pI9Af4FJ3ws/0.jpg)](https://www.youtube.com/watch?v=pI9Af4FJ3ws)
+
 ## How We Got Here
 
 > Some of the setup steps have already been done for you to create this app. Here's what we've taken care of:
