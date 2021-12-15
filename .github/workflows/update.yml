@@ -1,0 +1,31 @@
+name: update
+
+on:
+  schedule:
+    - cron: "5 5 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    if: ${{ github.repository == 'grouparoo/app-example-cloud' }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - run: npm install
+      - run: sudo npm install -g npm-check-updates
+      - run: npm-check-updates "/grouparoo/" -u
+      - run: npm install
+      - name: store-core-version
+        run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updating Grouparoo Packages to v${{ env.CORE_VERSION }}
+          commit_user_name: Grouparoo Bot
+          commit_user_email: hello@grouparoo.com
+          commit_author: Grouparoo Bot <hello@grouparoo.com>
+          branch: ${{ github.head_ref }}
+          tagging_message: v${{ env.CORE_VERSION }}
