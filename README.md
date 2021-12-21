@@ -40,7 +40,8 @@ Assuming you have node.js and the `grouparoo` cli installed:
 2. `cd app-example-cloud`
 3. `npm install`
 4. `cp .env.example .env`
-5. `grouparoo config`
+5. Add your Hubspot and Snowflake credentials to your `.env` file
+6. `grouparoo config`
 
 ## Deployment Steps
 
